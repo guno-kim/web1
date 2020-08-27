@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <script src="main.js" defer></script>
+    <script src="slider_main.js" defer></script>
+    <title>영숙전복</title>
+  </head>
+  <body class="flex_column_center">
+    <div class="banner flex_column_center">
+      <a class="logo"><img src="img/logo.png" alt="logo" /></a>
+      <div class="buttons">
+        <a href="" data-anchor="#anchor01" class="button anchor">HOME</a>
+        <a href="" data-anchor="#anchor02" class="button anchor">STORY</a>
+        <a href="" data-anchor="#anchor03" class="button anchor">PRODUCT</a>
+        <a href="" data-anchor="#anchor04" class="button anchor">CONTACT</a>
+        <a href="tel:010-9893-2717" class="button">ORDER</a>
+      </div>
+    </div>
+    <div id="anchor01"></div>
+    <section id="sec01"></section>
+
+    <!-- section2 -->
+    <div id="anchor02"></div>
+
+    <section id="sec02" class="flex_column_center">
+      <img src="img/text01.png" alt="text01" class="text01"/>
+      <img src="img/text02.png" alt="text02" class="text02"/>
+      <br>
+      <div class="slider_container">
+      <div class="slider_wrap">
+        <div class="slider_main">
+          <div class="btn_container">
+            <i class="fas fa-angle-left slider_pre_button"></i>
+          </div>
+          <div class="slider_box">
+              <div class="slider_content">
+                <img src="img/slide01.jpg" alt="slide01" />
+              </div>
+              <div class="slider_content">
+                <img src="img/slide02.jpg" alt="slide02" />
+              </div>
+              <div class="slider_content">
+                <img src="img/slide03.jpg" alt="slide03" />
+              </div>
+          </div>
+          <div class="btn_container"> <i class="fas fa-angle-right slider_next_button"></i></div></div>
+         
+        </div>
+        <ul class="slider_pagination"></ul>
+      </div>
+    </div>
+
+      <img src="img/text03.png" alt="text03" class="text03"/>
+    </section>
+
+    <!-- section3 -->
+    <div id="anchor03"></div>
+
+    <section id="sec03" class="flex_column_center">
+      <img src="img/text04.png" alt="text04"  class="text04"/>
+      <img src="img/text05.png" alt="text05" class="text05"/>
+      <img src="img/img01.jpg" alt="img01" class="img01"/>
+      <img src="img/text06.png" alt="text06" class="text06"/>
+    </section>
+    <!-- section4 -->
+
+    <section id="sec04">
+      <div class="imgBox flex_column_center">
+        <img src="img/img02.jpg" class="img02" />
+        <img src="img/img03.jpg" class="img03" />
+      </div>
+      <div class="textBox flex_column_center">
+        <img src="img/text07.jpg" alt="text07" />
+        <img src="img/text08.jpg" alt="text08" />
+      </div>
+    </section>
+    <!-- section5 -->
+    <div id="anchor04"></div>
+
+    <section id="sec05" class="flex_column_center" >
+      <div class="sec05_container flex_column_center">
+      <img src="img/text09.jpg" class="text08" />
+      <div id="map" >
+        <script
+          type="text/javascript"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c0309e6365a5d977929f02aa32ee61d7"
+        ></script>
+        <script>
+          var container = document.getElementById("map");
+          var options = {
+            center: new kakao.maps.LatLng(37.487724, 126.753013),
+            level: 2,
+          };
+
+          var map = new kakao.maps.Map(container, options);
+          var markerPosition = new kakao.maps.LatLng(37.487724, 126.753013);
+          var marker = new kakao.maps.Marker({
+            position: markerPosition,
+          });
+
+          // 마커가 지도 위에 표시되도록 설정합니다
+          marker.setMap(map);
+
+          var iwContent = "<div style='font:bolder'>경기 부천시 송내역</div>";
+          var iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); //인포윈도우 표시 위치입니다
+
+          var infowindow = new kakao.maps.InfoWindow({
+            position: iwPosition,
+            content: iwContent,
+          });
+
+          // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+          infowindow.open(map, marker);
+        </script>
+      </div>
+      <img src="img/text10.png" class="img10" alt="text10" />
+    </div>
+    </section>
+
+    <section id="sec06">
+      <div class="footer">
+        <img src="img/logo_footer.png" class="logo_footer" alt="logo_footer" />
+        <img src="img/text11.png" class="text11" alt="text11" />
+      </div>
+    </section>
+  </body>
+</html>
